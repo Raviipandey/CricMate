@@ -66,11 +66,17 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: SingleChildScrollView(
           child: Column(children: [
-            Text(
-              '\n IPL Team Performance Trends (Win Count): ',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Center(
+                child: Text(
+                  '\n IPL Team Performance Trends (Win Count): ',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
               ),
             ),
             SfCartesianChart(
