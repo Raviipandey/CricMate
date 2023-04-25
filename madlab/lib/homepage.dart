@@ -67,10 +67,11 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(children: [
             SfCartesianChart(
                 primaryXAxis: CategoryAxis(),
+                
                 // Chart title
                 title: ChartTitle(
                     text:
-                        'Season Feature \n IPL Team Performance Statistic (Win Count): \nMumbai Indians '),
+                        '\n IPL Team Performance Trends (Win Count): \nMumbai Indians (MI) '),
                 // Enable legend
                 legend: Legend(isVisible: false),
                 // Enable tooltip
@@ -102,7 +103,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 // Chart title
                 title: ChartTitle(
                     text:
-                        'IPL Team Performance Statistic (Win Count): \nSeason 2014'),
+                        '\n\nChennai Super Kings (CSK)'),
                 // Enable legend
                 legend: Legend(isVisible: false),
                 // Enable tooltip
@@ -110,17 +111,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 series: <ChartSeries<_Matches, String>>[
                   LineSeries<_Matches, String>(
                       dataSource: <_Matches>[
-                        _Matches('SRH', 4),
-                        _Matches('MI', 3),
-                        _Matches('GL', 0),
-                        _Matches('RPS', 0),
-                        _Matches('RCB', 5),
-                        _Matches('KKR', 6),
-                        _Matches('DD', 2),
-                        _Matches('KXIP', 8),
-                        _Matches('CSK', 8),
-                        _Matches('RR', 7),
-                        _Matches('SRH1', 0)
+                        _Matches('2008', 9),
+                        _Matches('2009', 8),
+                        _Matches('2010', 9),
+                        _Matches('2011', 11),
+                        _Matches('2012', 10),
+                        _Matches('2013', 12),
+                        _Matches('2014', 9),
+                        _Matches('2015', 10),
+                        _Matches('2016', 0),
+                        _Matches('2017', 0),
+                        _Matches('2018', 11),
+                        _Matches('2019', 10),
+                        _Matches('2020', 6)
                       ],
                       xValueMapper: (_Matches WinCount, _) => WinCount.team,
                       yValueMapper: (_Matches WinCount, _) => WinCount.WinCount,
@@ -132,7 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 // Chart title
                 title: ChartTitle(
                     text:
-                        'IPL Team Performance Statistic (Win Count):\n Season 2013'),
+                        '\n\n Royal Challengers Bangalore (RCB)'),
                 // Enable legend
                 legend: Legend(isVisible: false),
                 // Enable tooltip
@@ -140,17 +143,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 series: <ChartSeries<_Matches, String>>[
                   LineSeries<_Matches, String>(
                       dataSource: <_Matches>[
-                        _Matches('SRH', 10),
-                        _Matches('MI', 13),
-                        _Matches('GL', 0),
-                        _Matches('RPS', 4),
-                        _Matches('RCB', 9),
-                        _Matches('KKR', 6),
-                        _Matches('DD', 3),
-                        _Matches('KXIP', 8),
-                        _Matches('CSK', 12),
-                        _Matches('RR', 11),
-                        _Matches('SRH1', 0)
+                        _Matches('2008', 4),
+                        _Matches('2009', 9),
+                        _Matches('2010', 8),
+                        _Matches('2011', 10),
+                        _Matches('2012', 8),
+                        _Matches('2013', 9),
+                        _Matches('2014', 5),
+                        _Matches('2015', 8),
+                        _Matches('2016', 9),
+                        _Matches('2017', 3),
+                        _Matches('2018', 6),
+                        _Matches('2019', 5),
+                        _Matches('2020', 7)
                       ],
                       xValueMapper: (_Matches WinCount, _) => WinCount.team,
                       yValueMapper: (_Matches WinCount, _) => WinCount.WinCount,
@@ -162,7 +167,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 // Chart title
                 title: ChartTitle(
                     text:
-                        'IPL Team Performance Statistic (Win Count):\n Season 2012'),
+                        '\n\n Kolkata Knight Riders (KKR)'),
                 // Enable legend
                 legend: Legend(isVisible: false),
                 // Enable tooltip
@@ -170,17 +175,52 @@ class _HomeScreenState extends State<HomeScreen> {
                 series: <ChartSeries<_Matches, String>>[
                   LineSeries<_Matches, String>(
                       dataSource: <_Matches>[
-                        _Matches('SRH', 4),
-                        _Matches('MI', 10),
-                        _Matches('GL', 0),
-                        _Matches('RPS', 4),
-                        _Matches('RCB', 8),
-                        _Matches('KKR', 12),
-                        _Matches('DD', 11),
-                        _Matches('KXIP', 8),
-                        _Matches('CSK', 10),
-                        _Matches('RR', 7),
-                        _Matches('SRH1', 0)
+                        _Matches('2008', 6),
+                        _Matches('2009', 3),
+                        _Matches('2010', 7),
+                        _Matches('2011', 8),
+                        _Matches('2012', 12),
+                        _Matches('2013', 6),
+                        _Matches('2014', 11),
+                        _Matches('2015', 7),
+                        _Matches('2016', 8),
+                        _Matches('2017', 9),
+                        _Matches('2018', 9),
+                        _Matches('2019', 6),
+                        _Matches('2020', 7)
+                      ],
+                      xValueMapper: (_Matches WinCount, _) => WinCount.team,
+                      yValueMapper: (_Matches WinCount, _) => WinCount.WinCount,
+                      // Enable data label
+                      dataLabelSettings: DataLabelSettings(isVisible: true))
+                ]
+                ),
+SfCartesianChart(
+                primaryXAxis: CategoryAxis(),
+                // Chart title
+                title: ChartTitle(
+                    text:
+                        '\n\n Delhi Capitals (DC)'),
+                // Enable legend
+                legend: Legend(isVisible: false),
+                // Enable tooltip
+                tooltipBehavior: TooltipBehavior(enable: true),
+                series: <ChartSeries<_Matches, String>>[
+                  LineSeries<_Matches, String>(
+                      dataSource: <_Matches>[
+                        _Matches('2008', 7),
+                        _Matches('2009', 10),
+                        _Matches('2010', 7),
+                        _Matches('2011', 4),
+                        _Matches('2012', 11),
+                        _Matches('2013', 3),
+                        _Matches('2014', 2),
+                        _Matches('2015', 5),
+                        _Matches('2016', 7),
+                        _Matches('2017', 6),
+                        _Matches('2018', 5),
+                        _Matches('2019', 10),
+                        _Matches('2020', 9)
                       ],
                       xValueMapper: (_Matches WinCount, _) => WinCount.team,
                       yValueMapper: (_Matches WinCount, _) => WinCount.WinCount,
