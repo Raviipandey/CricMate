@@ -29,6 +29,49 @@
             {
               "client_id": "145130646278-dsh46qdr50slk1ln0nn67bp76mjj6jmj.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "145130646278-2mh80jifs54488neiq1eqrmfgf0cm95o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.madlab"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145130646278:android:513f80d082f7c99c8c0c87",
+        "android_client_info": {
+          "package_name": "com.ibhavikmakwana.cricketteam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "145130646278-dsh46qdr50slk1ln0nn67bp76mjj6jmj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4mIq8PcZS7Jm6uWa2LT07qCy5uGTrl4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "145130646278-dsh46qdr50slk1ln0nn67bp76mjj6jmj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "145130646278-2mh80jifs54488neiq1eqrmfgf0cm95o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.madlab"
+              }
             }
           ]
         }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:madlab/homepage.dart';
 
 // ignore: camel_case_types
 class profile extends StatefulWidget {
@@ -37,7 +37,16 @@ class _profilepageState extends State<profilepage> {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_rounded),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushAndRemoveUntil<dynamic>(
+              context,
+              MaterialPageRoute<dynamic>(
+                builder: (BuildContext context) => HomeScreen(key: UniqueKey()),
+              ),
+              (route) =>
+                  true, //if you want to disable back feature set to false
+            );
+          },
         ),
         title: const Text("My Profile"),
         centerTitle: true,
@@ -119,7 +128,7 @@ class _profilepageState extends State<profilepage> {
               const Divider(),
               ListTile(
                 title: const Text(
-                  "My Transaction",
+                  "My Matches",
                   style: TextStyle(fontSize: 20),
                 ),
                 leading: Container(
@@ -129,7 +138,7 @@ class _profilepageState extends State<profilepage> {
                       borderRadius: BorderRadius.circular(100),
                       color: Colors.black.withOpacity(0.1)),
                   child: const Icon(
-                    Icons.book_online_outlined,
+                    Icons.generating_tokens,
                     color: Color.fromARGB(255, 0, 0, 0),
                   ),
                 ),

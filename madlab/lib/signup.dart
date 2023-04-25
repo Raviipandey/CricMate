@@ -3,6 +3,7 @@ import 'package:madlab/utils/color_utils.dart';
 import 'package:madlab/reusables/resuables.dart';
 import 'package:madlab/homepage.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);

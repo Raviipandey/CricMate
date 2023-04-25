@@ -6,16 +6,16 @@ class Match {
   final int matchNumber;
   final String team1;
   final String team2;
-  final String date;
-  final String time;
+  final String Date;
+  final String Time;
   final String location;
 
   Match({
     required this.matchNumber,
     required this.team1,
     required this.team2,
-    required this.date,
-    required this.time,
+    required this.Date,
+    required this.Time,
     required this.location,
   });
 
@@ -24,8 +24,8 @@ class Match {
       matchNumber: json['matchNumber'],
       team1: json['team1'],
       team2: json['team2'],
-      date: json['date'],
-      time: json['time'],
+      Date: json['Date'],
+      Time: json['Time'],
       location: json['location'],
     );
   }
@@ -47,7 +47,7 @@ class _MatchesListState extends State<MatchesList> {
 
   Future<void> fetchMatches() async {
     final response = await http.get(Uri.parse(
-        'https://gist.githubusercontent.com/Raviipandey/7d99c23424937404bcf4186a5ecd051b/raw/df2182fa32492d3d40d19da4a906608cbb972673/cricketdata'));
+        'https://gist.githubusercontent.com/jasmit21/0c554af3792958dafaf2d16900a1b3d3/raw/bee41b75e4fa848958af3703815fef78795e88ce/crickData.json'));
 
     if (response.statusCode == 200) {
       final List<dynamic> jsonData = jsonDecode(response.body);
@@ -74,7 +74,7 @@ class _MatchesListState extends State<MatchesList> {
               subtitle:
                   Text('${_matches[index].team1} vs ${_matches[index].team2}'),
               trailing:
-                  Text('${_matches[index].date}, ${_matches[index].time}'),
+                  Text('${_matches[index].Date}, ${_matches[index].Time}'),
             ),
           );
         },

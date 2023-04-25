@@ -52,7 +52,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           password: _passwordTextController.text)
                       .then((value) {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => MatchesList()));
+                        MaterialPageRoute(builder: (context) => HomeScreen(key: UniqueKey())));
                   }).onError((error, stackTrace) {
                     print("Error ${error.toString()}");
                   });
