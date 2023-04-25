@@ -66,13 +66,18 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: SingleChildScrollView(
           child: Column(children: [
+            Text(
+              '\n IPL Team Performance Trends (Win Count): ',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
+            ),
             SfCartesianChart(
                 primaryXAxis: CategoryAxis(),
 
                 // Chart title
-                title: ChartTitle(
-                    text:
-                        '\n IPL Team Performance Trends (Win Count): \nMumbai Indians (MI) '),
+                title: ChartTitle(text: '\nMumbai Indians (MI) '),
                 // Enable legend
                 legend: Legend(isVisible: false),
                 // Enable tooltip
@@ -227,7 +232,7 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Colors.black,
             ),
             Text(
-              'Toss Feature',
+              '\nToss Feature',
               style: TextStyle(fontSize: 24),
             ),
             PieChartExample(),
