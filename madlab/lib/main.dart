@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:madlab/cricapi.dart';
+import 'package:madlab/pieChart.dart';
 import 'package:madlab/homepage.dart';
 import 'package:madlab/signin.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -27,5 +28,6 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Raleway',
         ),
         home: HomeScreen(key: UniqueKey()));
+    // home: HomeScreen());
   }
 }

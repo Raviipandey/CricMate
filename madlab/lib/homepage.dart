@@ -186,7 +186,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       yValueMapper: (_Matches WinCount, _) => WinCount.WinCount,
                       // Enable data label
                       dataLabelSettings: DataLabelSettings(isVisible: true))
-                ])
+                ]),
           ]),
         ));
   }
