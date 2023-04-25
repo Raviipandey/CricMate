@@ -221,7 +221,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       dataLabelSettings: DataLabelSettings(isVisible: true))
                 ]),
             SizedBox(
-              height: 10,
+              height: 20,
+            ),
+            Divider(
+              color: Colors.black,
             ),
             Text(
               'Toss Feature',
