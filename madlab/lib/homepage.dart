@@ -8,7 +8,6 @@ import 'package:madlab/signin.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({required Key key}) : super(key: key);
 
@@ -20,108 +19,109 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Home page"),
-      ),
-      drawer: Drawer(
-        width: 250,
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 0.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 5.0),
-                      child: Text(
-                        'CricMate',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
+        appBar: AppBar(
+          title: Text("Home page"),
+        ),
+        drawer: Drawer(
+          width: 250,
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 0.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 4.0),
+                        child: Text(
+                          'CricMate',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                          ),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    CircleAvatar(
-                      backgroundImage:
-                          AssetImage("assets/images/profilepic.jpg"),
-                      maxRadius: 50,
-                    ),
-                  ],
+                      SizedBox(
+                        height: 15,
+                      ),
+                      CircleAvatar(
+                        backgroundImage:
+                            AssetImage("assets/images/profilepic.jpg"),
+                        maxRadius: 40,
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            const Divider(
-              height: 0.0,
-              thickness: 2.0,
-            ),
-            ListTile(
-              title: Text(
-                'My Profile',
-                style: TextStyle(fontSize: 16),
+              const Divider(
+                height: 0.0,
+                thickness: 2.0,
               ),
-              onTap: () {
-                Navigator.pop(context); // close the drawer
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => profile()),
-                );
-              },
-            ),
-            const Divider(
-              height: 0.0,
-              thickness: 2.0,
-            ),
-            ListTile(
-              title: Text('Fixtures', style: TextStyle(fontSize: 16)),
-              onTap: () {
-                Navigator.pop(context); // close the drawer
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MatchesList()),
-                );
-              },
-            ),
-            const Divider(
-              height: 0.0,
-              thickness: 2.0,
-            ),
-            ListTile(
-              title: Text('CricPredictions', style: TextStyle(fontSize: 16)),
-              onTap: () {
-                Navigator.pop(context); // close the drawer
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => AddPage()),
-                );
-              },
-            ),
-            const Divider(
-              height: 0.0,
-              thickness: 2.0,
-            ),
-            ElevatedButton(
-              onPressed: () async {
-                await FirebaseAuth.instance.signOut();
-                SharedPreferences prefs = await SharedPreferences.getInstance();
-                await prefs.remove('user_uid');
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => SignInScreen()));
-              },
-              child: Text('Logout', style: TextStyle(fontSize: 15)),
-            ),
-          ],
+              ListTile(
+                title: Text(
+                  'My Profile',
+                  style: TextStyle(fontSize: 16),
+                ),
+                onTap: () {
+                  Navigator.pop(context); // close the drawer
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => profile()),
+                  );
+                },
+              ),
+              const Divider(
+                height: 0.0,
+                thickness: 2.0,
+              ),
+              ListTile(
+                title: Text('Fixtures', style: TextStyle(fontSize: 16)),
+                onTap: () {
+                  Navigator.pop(context); // close the drawer
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MatchesList()),
+                  );
+                },
+              ),
+              const Divider(
+                height: 0.0,
+                thickness: 2.0,
+              ),
+              ListTile(
+                title: Text('CricPredictions', style: TextStyle(fontSize: 16)),
+                onTap: () {
+                  Navigator.pop(context); // close the drawer
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AddPage()),
+                  );
+                },
+              ),
+              const Divider(
+                height: 0.0,
+                thickness: 2.0,
+              ),
+              ElevatedButton(
+                onPressed: () async {
+                  await FirebaseAuth.instance.signOut();
+                  SharedPreferences prefs =
+                      await SharedPreferences.getInstance();
+                  await prefs.remove('user_uid');
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => SignInScreen()));
+                },
+                child: Text('Logout', style: TextStyle(fontSize: 15)),
+              ),
+            ],
+          ),
         ),
-      ),
-      body: SingleChildScrollView(
+        body: SingleChildScrollView(
           child: Column(children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
