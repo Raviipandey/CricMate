@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         key: UniqueKey(),
         theme: ThemeData(
           // Define the default Brightness and Colors
-          brightness: Brightness.dark,
+          brightness: Brightness.light,
           splashColor: Colors.black12,
           primaryColor: Colors.cyan[600],
           accentColor: Colors.cyan[600],

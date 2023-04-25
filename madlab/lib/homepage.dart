@@ -70,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 // Chart title
                 title: ChartTitle(
                     text:
-                        'Season Feature \n IPL Team Performance Statistic (Win Count): \nSeason 2017'),
+                        'Season Feature \n IPL Team Performance Statistic (Win Count): \nMumbai Indians '),
                 // Enable legend
                 legend: Legend(isVisible: false),
                 // Enable tooltip
@@ -78,17 +78,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 series: <ChartSeries<_Matches, String>>[
                   LineSeries<_Matches, String>(
                       dataSource: <_Matches>[
-                        _Matches('SRH', 8),
-                        _Matches('MI', 12),
-                        _Matches('GL', 4),
-                        _Matches('RPS', 10),
-                        _Matches('RCB', 3),
-                        _Matches('KKR', 9),
-                        _Matches('DD', 6),
-                        _Matches('KXIP', 7),
-                        _Matches('CSK', 0),
-                        _Matches('RR', 0),
-                        _Matches('SRH1', 0)
+                        _Matches('2008', 7),
+                        _Matches('2009', 5),
+                        _Matches('2010', 11),
+                        _Matches('2011', 10),
+                        _Matches('2012', 10),
+                        _Matches('2013', 13),
+                        _Matches('2014', 7),
+                        _Matches('2015', 10),
+                        _Matches('2016', 7),
+                        _Matches('2017', 12),
+                        _Matches('2018', 6),
+                        _Matches('2019', 11),
+                        _Matches('2020', 9),
                       ],
                       xValueMapper: (_Matches WinCount, _) => WinCount.team,
                       yValueMapper: (_Matches WinCount, _) => WinCount.WinCount,
