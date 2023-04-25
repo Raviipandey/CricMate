@@ -72,10 +72,6 @@ class _PieChartExampleState extends State<PieChartExample> {
               //   position: this._legendPosition,
               //   desiredMaxRows: 2,
               // ),
-              charts.DatumLegend(
-                position: this._legendPosition,
-                desiredMaxRows: 2,
-              ),
             ],
           ),
         ),
@@ -84,5 +80,4 @@ class _PieChartExampleState extends State<PieChartExample> {
   }
 
   /// Widgets to control the chart appearance and behavior.
-}
 }
