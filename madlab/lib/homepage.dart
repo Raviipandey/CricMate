@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:madlab/cricapi.dart';
+import 'package:madlab/pieChart.dart';
 import 'package:madlab/profilepage.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
@@ -67,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(children: [
             SfCartesianChart(
                 primaryXAxis: CategoryAxis(),
-                
+
                 // Chart title
                 title: ChartTitle(
                     text:
@@ -101,9 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
             SfCartesianChart(
                 primaryXAxis: CategoryAxis(),
                 // Chart title
-                title: ChartTitle(
-                    text:
-                        '\n\nChennai Super Kings (CSK)'),
+                title: ChartTitle(text: '\n\nChennai Super Kings (CSK)'),
                 // Enable legend
                 legend: Legend(isVisible: false),
                 // Enable tooltip
@@ -133,9 +132,8 @@ class _HomeScreenState extends State<HomeScreen> {
             SfCartesianChart(
                 primaryXAxis: CategoryAxis(),
                 // Chart title
-                title: ChartTitle(
-                    text:
-                        '\n\n Royal Challengers Bangalore (RCB)'),
+                title:
+                    ChartTitle(text: '\n\n Royal Challengers Bangalore (RCB)'),
                 // Enable legend
                 legend: Legend(isVisible: false),
                 // Enable tooltip
@@ -165,9 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
             SfCartesianChart(
                 primaryXAxis: CategoryAxis(),
                 // Chart title
-                title: ChartTitle(
-                    text:
-                        '\n\n Kolkata Knight Riders (KKR)'),
+                title: ChartTitle(text: '\n\n Kolkata Knight Riders (KKR)'),
                 // Enable legend
                 legend: Legend(isVisible: false),
                 // Enable tooltip
@@ -193,14 +189,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       yValueMapper: (_Matches WinCount, _) => WinCount.WinCount,
                       // Enable data label
                       dataLabelSettings: DataLabelSettings(isVisible: true))
-                ]
-                ),
-SfCartesianChart(
+                ]),
+            SfCartesianChart(
                 primaryXAxis: CategoryAxis(),
                 // Chart title
-                title: ChartTitle(
-                    text:
-                        '\n\n Delhi Capitals (DC)'),
+                title: ChartTitle(text: '\n\n Delhi Capitals (DC)'),
                 // Enable legend
                 legend: Legend(isVisible: false),
                 // Enable tooltip
@@ -227,6 +220,14 @@ SfCartesianChart(
                       // Enable data label
                       dataLabelSettings: DataLabelSettings(isVisible: true))
                 ]),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              'Toss Feature',
+              style: TextStyle(fontSize: 24),
+            ),
+            PieChartExample(),
           ]),
         ));
   }
