@@ -70,11 +70,18 @@ class _MatchesListState extends State<MatchesList> {
         itemBuilder: (BuildContext context, int index) {
           return Card(
             child: ListTile(
-              title: Text('Match ${_matches[index].matchNumber}'),
-              subtitle:
-                  Text('${_matches[index].team1} vs ${_matches[index].team2}'),
-              trailing:
-                  Text('${_matches[index].Date}, ${_matches[index].Time}'),
+              title: Text(
+                'Match ${_matches[index].matchNumber}',
+                style: TextStyle(fontSize: 17),
+              ),
+              subtitle: Text(
+                '${_matches[index].team1} vs ${_matches[index].team2}',
+                style: TextStyle(fontSize: 17),
+              ),
+              trailing: Text(
+                '${_matches[index].Date}, ${_matches[index].Time}',
+                style: TextStyle(fontSize: 17),
+              ),
             ),
           );
         },

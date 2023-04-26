@@ -27,8 +27,8 @@ class _PieChartExampleState extends State<PieChartExample> {
 
   // Data to render.
   final List<_CostsData> _data = [
-    const _CostsData('Yes', 43.7),
-    const _CostsData('No', 56.3),
+    const _CostsData('Win', 43.7),
+    const _CostsData('Lost', 56.3),
   ];
 
   @override
@@ -68,10 +68,10 @@ class _PieChartExampleState extends State<PieChartExample> {
                 behaviorPosition: this._titlePosition,
               ),
               // Add legend. ("Datum" means the "X-axis" of each data point.)
-              // charts.DatumLegend(
-              //   position: this._legendPosition,
-              //   desiredMaxRows: 2,
-              // ),
+              charts.DatumLegend(
+                position: this._legendPosition,
+                desiredMaxRows: 2,
+              ),
             ],
           ),
         ),

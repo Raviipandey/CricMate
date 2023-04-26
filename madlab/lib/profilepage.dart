@@ -85,14 +85,14 @@ class _profilepageState extends State<profilepage> {
               const SizedBox(
                 height: 10,
               ),
-              SizedBox(
-                width: 120,
-                child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                        side: BorderSide.none, shape: const StadiumBorder()),
-                    child: const Text("Update Profile")),
-              ),
+              // SizedBox(
+              //   width: 120,
+              //   child: ElevatedButton(
+              //       onPressed: () {},
+              //       style: ElevatedButton.styleFrom(
+              //           side: BorderSide.none, shape: const StadiumBorder()),
+              //       child: const Text("Update Profile")),
+              // ),
               const SizedBox(
                 height: 20,
               ),

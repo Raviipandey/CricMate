@@ -50,18 +50,21 @@ class _HomeScreenState extends State<HomeScreen> {
                         height: 15,
                       ),
                       CircleAvatar(
-                        backgroundImage:
-                            AssetImage("assets/images/profilepic.jpg"),
-                        maxRadius: 40,
+                        radius: 41.5,
+                        child: CircleAvatar(
+                          backgroundImage:
+                              AssetImage("assets/images/profilepic.jpg"),
+                          maxRadius: 40,
+                        ),
                       ),
                     ],
                   ),
                 ),
               ),
-              const Divider(
-                height: 0.0,
-                thickness: 2.0,
-              ),
+              // const Divider(
+              //   height: 0.0,
+              //   thickness: 2.0,
+              // ),
               ListTile(
                 title: Text(
                   'My Profile',
@@ -103,10 +106,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   );
                 },
               ),
-              const Divider(
-                height: 0.0,
-                thickness: 2.0,
-              ),
+              // const Divider(
+              //   height: 0.0,
+              //   thickness: 2.0,
+              // ),
               ElevatedButton(
                 onPressed: () async {
                   await FirebaseAuth.instance.signOut();
@@ -295,8 +298,18 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Colors.black,
             ),
             Text(
-              '\nToss Feature',
-              style: TextStyle(fontSize: 24),
+              '\nToss Feature:',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 3,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Text(
+                'Analysis of the teams winning or losing  the match based on the toss won:',
+                style: TextStyle(fontSize: 17),
+              ),
             ),
             PieChartExample(),
           ]),
