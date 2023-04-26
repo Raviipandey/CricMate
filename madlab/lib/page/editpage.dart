@@ -127,33 +127,33 @@ class _EditPage extends State<EditPage> {
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))));
 
-    final matcheswonField = TextFormField(
-        controller: _cricketdata_matcheswon,
-        autofocus: false,
-        validator: (value) {
-          if (value == null || value.trim().isEmpty) {
-            return 'This field is required';
-          }
-        },
-        decoration: InputDecoration(
-            contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-            hintText: "Matches Won",
-            border:
-                OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))));
+    // final matcheswonField = TextFormField(
+    //     controller: _cricketdata_matcheswon,
+    //     autofocus: false,
+    //     validator: (value) {
+    //       if (value == null || value.trim().isEmpty) {
+    //         return 'This field is required';
+    //       }
+    //     },
+    //     decoration: InputDecoration(
+    //         contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+    //         hintText: "Matches Won",
+    //         border:
+    //             OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))));
 
-    final matcheslostField = TextFormField(
-        controller: _cricketdata_matcheslost,
-        autofocus: false,
-        validator: (value) {
-          if (value == null || value.trim().isEmpty) {
-            return 'This field is required';
-          }
-        },
-        decoration: InputDecoration(
-            contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-            hintText: "Matches Lost",
-            border:
-                OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))));
+    // final matcheslostField = TextFormField(
+    //     controller: _cricketdata_matcheslost,
+    //     autofocus: false,
+    //     validator: (value) {
+    //       if (value == null || value.trim().isEmpty) {
+    //         return 'This field is required';
+    //       }
+    //     },
+    //     decoration: InputDecoration(
+    //         contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+    //         hintText: "Matches Lost",
+    //         border:
+    //             OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))));
 
     final viewListbutton = TextButton(
         onPressed: () {
@@ -240,10 +240,10 @@ class _EditPage extends State<EditPage> {
                   playingroleField,
                   const SizedBox(height: 17.0),
                   matchesplayedField,
-                  const SizedBox(height: 17.0),
-                  matcheswonField,
-                  const SizedBox(height: 17.0),
-                  matcheslostField,
+                  // const SizedBox(height: 17.0),
+                  // matcheswonField,
+                  // const SizedBox(height: 17.0),
+                  // matcheslostField,
                   viewListbutton,
                   const SizedBox(height: 30.0),
                   SaveButon,
