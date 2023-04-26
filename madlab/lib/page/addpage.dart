@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:madlab/page/listpage.dart';
 import 'package:madlab/homepage.dart';
 import '../services/firebasecrud.dart';
@@ -79,18 +80,23 @@ class _AddPage extends State<AddPage> {
                 OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))));
 
     final matchesplayedField = TextFormField(
-        controller: _cricketdata_matchesplayed,
-        autofocus: false,
-        validator: (value) {
-          if (value == null || value.trim().isEmpty) {
-            return 'This field is required';
-          }
-        },
-        decoration: InputDecoration(
-            contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-            hintText: "Win percentage",
-            border:
-                OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))));
+      controller: _cricketdata_matchesplayed,
+      autofocus: false,
+      validator: (value) {
+        if (value == null || value.trim().isEmpty) {
+          return 'This field is required';
+        }
+      },
+      decoration: InputDecoration(
+          contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+          hintText: "Win percentage",
+          border:
+              OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+      keyboardType: TextInputType.number,
+      inputFormatters: <TextInputFormatter>[
+        FilteringTextInputFormatter.digitsOnly
+      ],
+    );
 
     final matcheswonField = TextFormField(
         controller: _cricketdata_matcheswon,
