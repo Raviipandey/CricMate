@@ -22,8 +22,22 @@ class _ListPage extends State<ListPage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text("List of Players"),
-        backgroundColor: Theme.of(context).primaryColor,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_rounded),
+          onPressed: () {
+            Navigator.pushAndRemoveUntil<dynamic>(
+              context,
+              MaterialPageRoute<dynamic>(
+                builder: (BuildContext context) => EditPage(),
+              ),
+              (route) =>
+                  true, //if you want to disable back feature set to false
+            );
+          },
+        ),
+        title: const Text("List of Predictions"),
+        // backgroundColor: Theme.of(context).primaryColor,
+        // backgroundColor: ,
         actions: <Widget>[
           IconButton(
             icon: Icon(
@@ -80,7 +94,7 @@ class _ListPage extends State<ListPage> {
                         TextButton(
                           style: TextButton.styleFrom(
                             padding: const EdgeInsets.all(5.0),
-                            primary: const Color.fromARGB(255, 143, 133, 226),
+                            // primary: const Color.fromARGB(255, 143, 133, 226),
                             textStyle: const TextStyle(fontSize: 20),
                           ),
                           child: const Text('Edit'),
@@ -109,7 +123,7 @@ class _ListPage extends State<ListPage> {
                         TextButton(
                           style: TextButton.styleFrom(
                             padding: const EdgeInsets.all(5.0),
-                            primary: const Color.fromARGB(255, 143, 133, 226),
+                            // primary: const Color.fromARGB(255, 143, 133, 226),
                             textStyle: const TextStyle(fontSize: 20),
                           ),
                           child: const Text('Delete'),

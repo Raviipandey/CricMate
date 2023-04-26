@@ -165,7 +165,7 @@ class _EditPage extends State<EditPage> {
             (route) => false, //if you want to disable back feature set to false
           );
         },
-        child: const Text('View List of Employee'));
+        child: const Text('View List of Predictions'));
 
     final SaveButon = Material(
       elevation: 5.0,
@@ -215,11 +215,11 @@ class _EditPage extends State<EditPage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text('FreeCode Spot'),
-        backgroundColor: Theme.of(context).primaryColor,
+        title: const Text('Edit CricPredictions'),
+        // backgroundColor: Theme.of(context).primaryColor,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Form(
             key: _formKey,
@@ -229,25 +229,25 @@ class _EditPage extends State<EditPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  DocIDField,
-                  const SizedBox(height: 25.0),
+                  // DocIDField,
+                  const SizedBox(height: 17.0),
                   teamnameField,
-                  const SizedBox(height: 25.0),
+                  const SizedBox(height: 17.0),
                   playernameField,
-                  const SizedBox(height: 35.0),
+                  const SizedBox(height: 17.0),
                   playerageField,
-                  const SizedBox(height: 35.0),
+                  const SizedBox(height: 17.0),
                   playingroleField,
-                  const SizedBox(height: 35.0),
+                  const SizedBox(height: 17.0),
                   matchesplayedField,
-                  const SizedBox(height: 35.0),
+                  const SizedBox(height: 17.0),
                   matcheswonField,
-                  const SizedBox(height: 35.0),
+                  const SizedBox(height: 17.0),
                   matcheslostField,
                   viewListbutton,
-                  const SizedBox(height: 45.0),
+                  const SizedBox(height: 30.0),
                   SaveButon,
-                  const SizedBox(height: 15.0),
+                  const SizedBox(height: 17.0),
                 ],
               ),
             ),

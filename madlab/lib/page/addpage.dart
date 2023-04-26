@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:madlab/page/listpage.dart';
-
+import 'package:madlab/homepage.dart';
 import '../services/firebasecrud.dart';
 
 class AddPage extends StatefulWidget {
@@ -181,6 +181,19 @@ class _AddPage extends State<AddPage> {
       appBar: AppBar(
         title: const Text('CricPredictions'),
         backgroundColor: Colors.blue,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_rounded),
+          onPressed: () {
+            Navigator.pushAndRemoveUntil<dynamic>(
+              context,
+              MaterialPageRoute<dynamic>(
+                builder: (BuildContext context) => HomeScreen(key: UniqueKey()),
+              ),
+              (route) =>
+                  true, //if you want to disable back feature set to false
+            );
+          },
+        ),
       ),
       body: Column(
         // mainAxisAlignment: MainAxisAlignment.center,
@@ -194,21 +207,21 @@ class _AddPage extends State<AddPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  const SizedBox(height: 15.0),
+                  const SizedBox(height: 17.0),
                   teamnameField,
-                  const SizedBox(height: 25.0),
+                  const SizedBox(height: 17.0),
                   playernameField,
-                  const SizedBox(height: 35.0),
+                  const SizedBox(height: 17.0),
                   playingroleField,
-                  const SizedBox(height: 35.0),
+                  const SizedBox(height: 17.0),
                   playerageField,
-                  const SizedBox(height: 35.0),
+                  const SizedBox(height: 17.0),
                   matchesplayedField,
-                  const SizedBox(height: 15.0),
+                  const SizedBox(height: 17.0),
                   viewListbutton,
-                  const SizedBox(height: 15.0),
+                  const SizedBox(height: 17.0),
                   SaveButon,
-                  const SizedBox(height: 15.0),
+                  const SizedBox(height: 17.0),
                 ],
               ),
             ),
