@@ -28,7 +28,7 @@ class _ListPage extends State<ListPage> {
             Navigator.pushAndRemoveUntil<dynamic>(
               context,
               MaterialPageRoute<dynamic>(
-                builder: (BuildContext context) => EditPage(),
+                builder: (BuildContext context) => AddPage(),
               ),
               (route) =>
                   true, //if you want to disable back feature set to false
