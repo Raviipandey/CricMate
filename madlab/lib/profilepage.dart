@@ -1,5 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:madlab/homepage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:madlab/signin.dart';
 
 // ignore: camel_case_types
 class profile extends StatefulWidget {
@@ -185,9 +188,21 @@ class _profilepageState extends State<profilepage> {
               ),
               const Divider(),
               ListTile(
-                title: const Text(
-                  "Logout",
-                  style: TextStyle(fontSize: 20),
+                title: GestureDetector(
+                  onTap: () async {
+                    await FirebaseAuth.instance.signOut();
+                    SharedPreferences prefs =
+                        await SharedPreferences.getInstance();
+                    await prefs.remove('user_uid');
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SignInScreen()));
+                  },
+                  child: const Text(
+                    "Logout",
+                    style: TextStyle(fontSize: 20),
+                  ),
                 ),
                 leading: Container(
                   width: 35,

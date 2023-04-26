@@ -79,7 +79,7 @@ class _ListPage extends State<ListPage> {
                                 style: const TextStyle(fontSize: 14)),
                             Text(
                                 "Playing role: " + e['Playing role'].toString(),
-                                style: const TextStyle(fontSize: 12)),
+                                style: const TextStyle(fontSize: 14)),
                             Text(
                                 "Win Percent: " +
                                     e['Matches played'].toString(),
@@ -110,8 +110,8 @@ class _ListPage extends State<ListPage> {
                                     playerage: e["Player age"],
                                     playingrole: e["Playing role"],
                                     matchesplayed: e["Matches played"],
-                                    matcheswon: e["Matches won"],
-                                    matcheslost: e["Matches lost"],
+                                    // matcheswon: e["Matches won"],
+                                    // matcheslost: e["Matches lost"],
                                   ),
                                 ),
                               ),

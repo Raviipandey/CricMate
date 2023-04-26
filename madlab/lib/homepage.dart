@@ -110,17 +110,6 @@ class _HomeScreenState extends State<HomeScreen> {
               //   height: 0.0,
               //   thickness: 2.0,
               // ),
-              ElevatedButton(
-                onPressed: () async {
-                  await FirebaseAuth.instance.signOut();
-                  SharedPreferences prefs =
-                      await SharedPreferences.getInstance();
-                  await prefs.remove('user_uid');
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => SignInScreen()));
-                },
-                child: Text('Logout', style: TextStyle(fontSize: 15)),
-              ),
             ],
           ),
         ),
